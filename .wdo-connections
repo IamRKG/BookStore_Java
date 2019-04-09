@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections:connections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connections="http://www.ibm.com/websphere/wdo/connections">
+  <connection id="New Generic JDBC">
+    <development xsi:type="connections:rsc-live-connection" id="New Generic JDBC_dev" name="New Generic JDBC"/>
+    <runtime xsi:type="connections:driver-manager-connection" auto-deploy="true" class-location="C:\Users\gradhak3\database\sqljdbc_6.0\enu\jre8\sqljdbc42.jar" id="New Generic JDBC_runtime" class-name="com.microsoft.sqlserver.jdbc.SQLServerDriver" url="jdbc:sqlserver://localhost:1433" userid="gradhak3"/>
+  </connection>
+  <connection id="BookStoreJDBC">
+    <development xsi:type="connections:rsc-live-connection" id="BookStoreJDBC_dev" name="BookStoreJDBC"/>
+    <runtime xsi:type="connections:driver-manager-connection" auto-deploy="true" class-location="C:\Users\gradhak3\database\sqljdbc_6.0\enu\jre8\sqljdbc42.jar" id="BookStoreJDBC_runtime" class-name="com.microsoft.sqlserver.jdbc.SQLServerDriver" url="jdbc:sqlserver://localhost:1433;databaseName=BS" userid="gradhak3"/>
+  </connection>
+</connections:connections>

@@ -1,0 +1,39 @@
+<server description="new server">
+
+    <!-- Enable features -->
+    <featureManager>
+	        	<feature>webProfile-7.0</feature>
+	        	<feature>localConnector-1.0</feature>
+	    		<feature>jdbc-4.1</feature>
+                <feature>appSecurity-2.0</feature> 
+    			<feature>jsf-2.2</feature>
+				<feature>jsp-2.3</feature>
+				<feature>cdi-1.2</feature>
+				<feature>jaxrs-2.0</feature>
+				<feature>jpa-2.1</feature>
+				<feature>ejbLite-3.2</feature>
+				<feature>jndi-1.0</feature>
+				<feature>jaxws-2.2</feature> 
+	</featureManager>
+
+    <!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" -->
+    <httpEndpoint httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
+                  
+    <!-- Automatically expand WAR files and EAR files -->
+    <applicationManager autoExpand="true"/>
+
+
+    <applicationMonitor updateTrigger="mbean"/>
+    
+    
+	<library id="SQL_LIB">
+		<file name="lib/sqljdbc4.jar"/>
+	</library>
+    
+     <dataSource id="DefaultDataSource" jndiName="jdbc/BookStoreDS" type="javax.sql.DataSource">
+    	<jdbcDriver javax.sql.DataSource="com.microsoft.sqlserver.jdbc.SQLServerDataSource" libraryRef="SQL_LIB"/>
+    	<properties URL="jdbc:sqlserver://localhost:1433;databaseName=BS;MODE=MSSQLServer;USER=gradhak3;PASSWORD=gradhak34;AUTO_SERVER=TRUE;" password="gradhak34" user="gradhak3"/>
+    </dataSource>
+
+    <webApplication id="BookStore" location="BookStore.war" name="BookStore"/>
+</server>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<liberty-plugin-config version="2.0">
+  <installDirectory>C:\projects\dev\git\BookStore\build\wlp</installDirectory>
+  <assemblyArtifact>
+    <groupId>com.ibm.websphere.appserver.runtime</groupId>
+    <artifactId>wlp-webProfile7</artifactId>
+    <version>17.0.0.2</version>
+    <type>zip</type>
+  </assemblyArtifact>
+  <assemblyArchive>C:\Users\gradhak3\.gradle\caches\modules-2\files-2.1\com.ibm.websphere.appserver.runtime\wlp-webProfile7\17.0.0.2\44c15c67cb02274eebe05be0bf7cd221a6cd4c3b\wlp-webProfile7-17.0.0.2.zip</assemblyArchive>
+  <servers>
+    <server>
+      <userDirectory>C:\projects\dev\git\BookStore\build\wlp\usr</userDirectory>
+      <serverDirectory>C:\projects\dev\git\BookStore\build\wlp\usr\servers\defaultServer</serverDirectory>
+      <serverOutputDirectory>C:\projects\dev\git\BookStore\build\wlp\usr\servers\defaultServer</serverOutputDirectory>
+      <serverName>defaultServer</serverName>
+      <looseApplication>true</looseApplication>
+      <stripVersion>false</stripVersion>
+      <applications>
+        <application>
+          <appsDirectory>apps</appsDirectory>
+          <applicationFilename>BookStore.war.xml</applicationFilename>
+          <warSourceDirectory>src/main/webapp</warSourceDirectory>
+          <projectType>war</projectType>
+        </application>
+      </applications>
+      <projectCompileDependency>com.sun.jersey:jersey-client:1.9.1</projectCompileDependency>
+      <projectCompileDependency>org.eclipse.persistence:eclipselink:2.5.1</projectCompileDependency>
+      <projectCompileDependency>javax.inject:javax.inject:1</projectCompileDependency>
+      <projectCompileDependency>io.openliberty.arquillian:arquillian-liberty-managed:1.0.3</projectCompileDependency>
+      <projectCompileDependency>org.jboss.shrinkwrap:shrinkwrap-api:1.2.6</projectCompileDependency>
+    </server>
+  </servers>
+</liberty-plugin-config>
